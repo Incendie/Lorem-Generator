@@ -5,8 +5,11 @@ import {
 	Route, Link, NavLink
 } from 'react-router-dom';
 import { ajax } from 'jquery';
+
+import Header from './Header';
 import Lorem from './Lorem';
 import Form from './Form';
+import Footer from './Footer';
 class App extends React.Component {
 	constructor() {
 		super();
@@ -30,8 +33,10 @@ class App extends React.Component {
 		}
 		return (
 			<div>
+				<Header />
 				<Form handleChange={this.handleChange} />
 				{paragraphs}
+				<Footer />
 			</div>
 		)
 	}

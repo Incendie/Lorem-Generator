@@ -1,7 +1,7 @@
 const phrases = [
   "Never limit yourself.",
   "I just want to eat spaghetti until my heart fails.",
-  "He is the git push origin master.",
+  "He is THE git push origin master.",
   "DUGGIE.",
   "color: blue.",
   "And let me tell you, if you believe, you will achieve, anything you set your mind to, never limit yourself.",
