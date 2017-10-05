@@ -6,25 +6,32 @@ import {
 } from 'react-router-dom';
 import { ajax } from 'jquery';
 import Lorem from './Lorem';
-
-console.log("ewoks");
+import Form from './Form';
 class App extends React.Component {
 	constructor() {
 		super();
 		this.state = {
-
+			numParagraphs: 0,
+			numSentences: 0,
 		}
+		this.handleChange = this.handleChange.bind(this);
 	}
+
+	handleChange(e) {
+		this.setState({
+			[e.target.name]: parseInt(e.target.value, 0),
+		});
+	}
+
 	render() {
 		let paragraphs = [];
-		for (let i = 0; i < 10; i++) {
-			paragraphs.push(<Lorem />);
+		for (let i = 0; i < this.state.numParagraphs; i++) {
+			paragraphs.push(<Lorem key={i} numSentences={this.state.numSentences} />);
 		}
 		return (
 			<div>
-
+				<Form handleChange={this.handleChange} />
 				{paragraphs}
-
 			</div>
 		)
 	}
