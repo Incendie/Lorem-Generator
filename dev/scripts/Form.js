@@ -5,31 +5,30 @@ const Form = (props) => {
     <div>
       <form>
         <div className="form__paragraph">
-          <label htmlFor="numPara">How many paragraphs do you need?</label>
           <select onChange={props.handleChange} name="numParagraphs" id="numPara">
-            <option value="0">Zero</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-            <option value="4">Four</option>
-            <option value="5">Five</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
           </select>
+          <label htmlFor="numPara">paragraphs</label>
         </div>
         <div className="form__sentences">
-          <label htmlFor="numPara">How many sentences per paragraph?</label>
           <select onChange={props.handleChange} name="numSentences" id="numLines">
-            <option value="0">Zero</option>
-            <option value="1">One</option>
-            <option value="2">Two</option>
-            <option value="3">Three</option>
-            <option value="4">Four</option>
-            <option value="5">Five</option>
-            <option value="6">Six</option>
-            <option value="7">Seven</option>
-            <option value="8">Eight</option>
-            <option value="9">Nine</option>
-            <option value="10">Ten</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
           </select>
+          <label htmlFor="numPara">sentences per paragraph</label>
         </div>
       </form>
     </div>
