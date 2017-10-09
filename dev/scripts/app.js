@@ -40,11 +40,9 @@ class App extends React.Component {
           <div className="left">
             <Header />
             <Form handleChange={this.handleChange} />
+            <Footer />
           </div>
           <div className="right">{paragraphs}</div>
-        </div>
-        <div className="wrapper">
-          <Footer />
         </div>
       </div>
     );
