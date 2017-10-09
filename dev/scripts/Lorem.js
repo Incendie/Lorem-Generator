@@ -20,7 +20,7 @@ const Lorem = props => {
   }
 
   return (
-    <div className="animated fadeInUp">
+    <div>
       <p>{paragraph}</p>
     </div>
   );
