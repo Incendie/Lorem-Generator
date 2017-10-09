@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Footer = () => {
   return (
@@ -6,7 +6,7 @@ const Footer = () => {
       <p>
         <a href="https://ansonli.io">Anson Li </a>
         &
-        <a href="https://http://evsdevs.com"> Evelyn Cheung</a>
+        <a href="http://evsdevs.com"> Evelyn Cheung</a>
       </p>
       <p>Copyright © 2017</p>
     </footer>

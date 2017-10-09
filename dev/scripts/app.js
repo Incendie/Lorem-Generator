@@ -33,6 +33,7 @@ class App extends React.Component {
     for (let i = 0; i < this.state.numParagraphs; i++) {
       paragraphs.push(<Lorem key={i} numSentences={this.state.numSentences} />);
     }
+
     return (
       <div>
         <div className="wrapper">
