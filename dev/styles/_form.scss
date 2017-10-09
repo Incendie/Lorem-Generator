@@ -1,0 +1,30 @@
+form {
+	font-family: $BodyFont;
+	font-size: 3rem;
+	font-weight: $light;
+}
+
+p {
+	margin-bottom: 20px;
+	line-height: 22px;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+#numPara, #numLines {
+	color: white;
+	font-weight: $bold;
+	border-style: none;
+	background-color: $dark;
+	text-decoration: underline;
+	margin-right: 10px;
+}

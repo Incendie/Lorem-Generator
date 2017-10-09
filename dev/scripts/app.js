@@ -32,11 +32,15 @@ class App extends React.Component {
 			paragraphs.push(<Lorem key={i} numSentences={this.state.numSentences} />);
 		}
 		return (
-			<div>
-				<Header />
-				<Form handleChange={this.handleChange} />
-				{paragraphs}
-				<Footer />
+			<div className="wrapper">
+				<div className="left">
+					<Header />
+					<Form handleChange={this.handleChange} />
+					<Footer />
+				</div>
+				<div className="right">
+					{paragraphs}
+				</div>
 			</div>
 		)
 	}

@@ -1,0 +1,77 @@
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'form';
+
+html {
+	font-size: 10px;
+ 	background: $dark;
+	color: $accent;
+	font-family: $BodyFont;
+}
+
+h1, h2, h3, h4, p {
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-family: $TitleFont;
+	font-size: 6rem;
+	text-transform: uppercase;
+	margin-top: 50px;
+}
+
+h2 {
+	font-family: $BodyFont;
+	font-size: 2.6rem;
+	font-weight: $light;
+}
+
+.htwos {
+	h2:first-child {
+		opacity: 0.5;
+		margin-bottom: 60px;
+	}
+
+	h2:nth-child(2) {
+		margin-bottom: 20px;
+	}
+
+	h2:nth-child(3) {
+		margin-bottom: 80px;
+	}
+}
+
+.wrapper {
+  width: 90%;
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+	width: 40%;
+}
+
+.right {
+	width: 48%;
+	color: white;
+	font-family: $BodyFont;
+	font-size: 1.6rem;
+	font-weight: $light;
+	padding-top: 60px;
+}
+
+footer {
+	margin-top: 150px;
+	font-size: 1.4rem;
+	font-weight: $light;
+	opacity: 0.7;
+}
+
+footer a {
+	text-decoration: none;
+	color: white;
+}
