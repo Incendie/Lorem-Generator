@@ -1,49 +1,54 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 import {
-	BrowserRouter as Router,
-	Route, Link, NavLink
-} from 'react-router-dom';
-import { ajax } from 'jquery';
+  BrowserRouter as Router,
+  Route,
+  Link,
+  NavLink
+} from "react-router-dom";
+import { ajax } from "jquery";
 
-import Header from './Header';
-import Lorem from './Lorem';
-import Form from './Form';
-import Footer from './Footer';
+import Header from "./Header";
+import Lorem from "./Lorem";
+import Form from "./Form";
+import Footer from "./Footer";
 class App extends React.Component {
-	constructor() {
-		super();
-		this.state = {
-			numParagraphs: 0,
-			numSentences: 0,
-		}
-		this.handleChange = this.handleChange.bind(this);
-	}
+  constructor() {
+    super();
+    this.state = {
+      numParagraphs: 0,
+      numSentences: 0
+    };
+    this.handleChange = this.handleChange.bind(this);
+  }
 
-	handleChange(e) {
-		this.setState({
-			[e.target.name]: parseInt(e.target.value, 0),
-		});
-	}
+  handleChange(e) {
+    this.setState({
+      [e.target.name]: parseInt(e.target.value, 0)
+    });
+  }
 
-	render() {
-		let paragraphs = [];
-		for (let i = 0; i < this.state.numParagraphs; i++) {
-			paragraphs.push(<Lorem key={i} numSentences={this.state.numSentences} />);
-		}
-		return (
-			<div className="wrapper">
-				<div className="left">
-					<Header />
-					<Form handleChange={this.handleChange} />
-					<Footer />
-				</div>
-				<div className="right">
-					{paragraphs}
-				</div>
-			</div>
-		)
-	}
+  render() {
+    let paragraphs = [];
+    for (let i = 0; i < this.state.numParagraphs; i++) {
+      paragraphs.push(<Lorem key={i} numSentences={this.state.numSentences} />);
+    }
+
+    return (
+      <div>
+        <div className="wrapper">
+          <div className="left">
+            <Header />
+            <Form handleChange={this.handleChange} />
+          </div>
+          <div className="right">{paragraphs}</div>
+        </div>
+        <div className="wrapper">
+          <Footer />
+        </div>
+      </div>
+    );
+  }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById("app"));
